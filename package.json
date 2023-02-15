@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "primeicons": "^6.0.1",
+    "primevue": "^3.23.0",
     "scss": "^0.2.4",
     "vue": "^3.2.45"
   },
