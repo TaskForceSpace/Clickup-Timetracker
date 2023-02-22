@@ -1,13 +1,9 @@
 
 <template>
-  <div>
+  <div class="whole__table">
     <h1>BLUBOOOO</h1>
     <Header></Header>
     <Table></Table>
-
-    <br>
-    <Button label="Filter bestätigen" icon="pi pi-check" />
-    <br>
   </div>
   <HelloWorld msg="Vite + Vue" />
 </template>
@@ -20,6 +16,13 @@ import Header from './components/Header.vue'
 </script>
 
 <style scoped>
+
+.whole__table {
+  padding: 12px;
+  border: 1px solid #dce4ee;
+  background-color: rgb(244, 235, 235);
+  border-radius: 12px;
+}
 
 .p-button {
   color: blue;
