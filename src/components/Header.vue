@@ -1,4 +1,3 @@
-
 <template>
   <div>
       <div>
@@ -29,25 +28,11 @@
         </span>
       </div>
   </div>
-  </template>
+</template>
   
-  <script setup> 
-  
-  const listId = '216452050';
-  const resp = await fetch(
-  `https://api.clickup.com/api/v2/list/${listId}`,
-  {
-    method: 'GET',
-    headers: {
-      Authorization: 'pk_48468128_J15MMUVX7Z1IU34VRZANI79W7ZUA5PP8'
-    }
-  }
-);
+<script setup>
 
-const data = await resp.text();
-console.log(data);
-
-  </script>
+</script>
   
   <style scoped>
   .filters {

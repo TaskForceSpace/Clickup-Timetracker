@@ -1,9 +1,9 @@
 
 <template>
   <div class="whole__table">
-    <h1>BLUBOOOO</h1>
-    <Header></Header>
-    <Table></Table>
+    <h1>Zeittagebuch</h1>
+    <Header/>
+    <Table/>
   </div>
   <HelloWorld msg="Vite + Vue" />
 </template>
@@ -11,7 +11,7 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue';
 import Table from './components/Table.vue';
-import Header from './components/Header.vue'
+// import Header from './components/Header.vue'
 
 </script>
 
