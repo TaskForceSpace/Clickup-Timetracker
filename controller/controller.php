@@ -1,11 +1,12 @@
 <?php
+require_once "./Config.php";
 
 /**
  * Requires libcurl
  */
 header('Access-Control-Allow-Origin: *');
 
-const teamId = "<TEAM_ID>";
+const teamId = Config::$teamid;
 
 $query = array(
 	"start_date" => $_GET['startDate'],

@@ -2,16 +2,20 @@
 <template>
   <div class="whole__table">
     <h1>Zeittagebuch</h1>
-    <Header/>
-    <Table/>
+    <Header v-model:headerPerson="sPerson" v-model:headerStartDate="sStartDate"/>
+    <Table :person="sPerson" :startDate="sStartDate"/>
   </div>
   <HelloWorld msg="Vite + Vue" />
 </template>
 
 <script setup>
-import HelloWorld from './components/HelloWorld.vue';
-import Table from './components/Table.vue';
-// import Header from './components/Header.vue'
+import {ref, watch} from 'vue'
+import HelloWorld from './components/HelloWorld.vue'
+import Table from './components/Table.vue'
+import Header from './components/Header.vue'
+
+const sPerson = ref('Blubbooaaasa');
+const sStartDate = ref(new Date());
 
 </script>
 
