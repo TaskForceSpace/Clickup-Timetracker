@@ -1,4 +1,5 @@
 <?php
+
 require_once "./Config.php";
 
 /**
@@ -6,11 +7,13 @@ require_once "./Config.php";
  */
 header('Access-Control-Allow-Origin: *');
 
-const teamId = Config::$teamid;
+$teamId = Config::$teamid;
+$apiKey = Config::$apiKey;
+$phpUrl = Config::$phpUrl;
 
 $query = array(
 	"start_date" => $_GET['startDate'],
-	"end_date" => $_GET['endDtate'],
+	"end_date" => $_GET['endDate'],
 	"assignee" => $_GET['userID']
 );
 
@@ -18,10 +21,10 @@ $curl = curl_init();
 
 curl_setopt_array($curl, [
 	CURLOPT_HTTPHEADER => [
-		"Authorization: <API_KEY>",
+		"Authorization: $apiKey",
 		"Content-Type: application/json"
 	],
-	CURLOPT_URL => "https://api.clickup.com/api/v2/team/" . teamId . "/time_entries?" . http_build_query($query),
+	CURLOPT_URL => $phpUrl . $teamId . "/time_entries?" . http_build_query($query),
 	CURLOPT_RETURNTRANSFER => true,
 	CURLOPT_CUSTOMREQUEST => "GET",
 ]);

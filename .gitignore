@@ -25,3 +25,4 @@ dist-ssr
 controller/apiKey.txt
 .gitignore
 .gitignore
+controller/Config.php

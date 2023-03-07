@@ -5,16 +5,14 @@
     <Header v-model:headerPerson="sPerson" v-model:headerStartDate="sStartDate"/>
     <Table :person="sPerson" :startDate="sStartDate"/>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
 <script setup>
-import {ref, watch} from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
+import {ref} from 'vue'
 import Table from './components/Table.vue'
 import Header from './components/Header.vue'
 
-const sPerson = ref('Blubbooaaasa');
+const sPerson = ref('');
 const sStartDate = ref(new Date());
 
 </script>
