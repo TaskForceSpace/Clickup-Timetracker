@@ -15,7 +15,7 @@
         </Column>
         <Column field="timeTrackerEndTime" header="Zeiterfassung Ende (Uhrzeit)">
           <template #body="slotProps">
-            <!-- {{ getTime(slotProps.data.end) }} -->
+            {{ getTime(slotProps.data.end) }}
           </template>
         </Column>
         <Column field="summaryWorkingHours" header="Summe Stunden"></Column>
@@ -51,18 +51,18 @@ const getData = () => {
   console.log(props.startDate);
   console.log(props.startDate.getTime());
 
-  // console.log("GET DATA END DATE");
-  // console.log(props.endDate);
-  // console.log(props.endDate.getTime());
+  console.log("GET DATA END DATE");
+  console.log(props.endDate);
+  console.log(props.endDate.getTime());
 
   isLoading.value = true;
 
   axios({
     method: 'GET',
-    url: "https://dummy.jakubwachowiak.de/controller.php",
+    url: "https://dummy.jakubwachowiak.de/controller.php?start_date=42",
     params: {
       start_date: props.startDate.getTime(),
-      // end_date: props.endDate.getTime(),
+      end_date: props.endDate.getTime(),
     }
   })
     .then((response) => {

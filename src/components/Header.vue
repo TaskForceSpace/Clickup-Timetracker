@@ -15,18 +15,18 @@
             <label for="date">Gebe Datum ein (Start)</label>
           </div>
         </div>
-        <!-- <div class="calendar__label calender__item filter__element">
+        <div class="calendar__label calender__item filter__element">
           <div class="p-float-label">
             <Calendar id="date" v-model="selectedEndDate" :showIcon="true" dateFormat="dd.mm.yy" @date-select="pushHeaderDataEndDate(selectedEndDate)" />
             <label for="date">Gebe Datum ein (Ende)</label>
           </div>
-        </div> -->
+        </div>
       </div>
       <div class="container"> 
         <Button class="filter__button filter__element" label="Filter (Space)" icon="pi pi-filter" />
           <span class="p-input-icon-left calender__item filter__element">
           <i class="pi pi-search" />
-          <InputText type="text" v-model="value1" placeholder="Gebe Space ein" />
+          <!-- <InputText type="text" v-model="value1" placeholder="Gebe Space ein" /> -->
         </span>
       </div>
   </div>

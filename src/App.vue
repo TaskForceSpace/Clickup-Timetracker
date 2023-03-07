@@ -2,8 +2,8 @@
 <template>
   <div class="whole__table">
     <h1>Zeittagebuch</h1>
-    <Header v-model:headerPerson="sPerson" v-model:headerStartDate="sStartDate"/>
-    <Table :person="sPerson" :startDate="sStartDate"/>
+    <Header v-model:headerPerson="sPerson" v-model:headerStartDate="sStartDate" v-model:headerEndDate="sEndDate"/>
+    <Table :person="sPerson" :startDate="sStartDate" :endDate="sEndDate"/>
   </div>
 </template>
 
@@ -14,6 +14,7 @@ import Header from './components/Header.vue'
 
 const sPerson = ref('');
 const sStartDate = ref(new Date());
+const sEndDate = ref(new Date());
 
 </script>
 
