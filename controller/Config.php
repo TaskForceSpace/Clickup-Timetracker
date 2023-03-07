@@ -21,5 +21,3 @@ Config::$phpUrl;
 // nicht static variablen
 $con = new Config();
 $con->test;
-
-
